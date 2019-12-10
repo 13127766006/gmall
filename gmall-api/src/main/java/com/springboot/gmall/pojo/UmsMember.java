@@ -1,8 +1,13 @@
-package com.springboot.gmall.user.pojo;
+package com.springboot.gmall.pojo;
 
+
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 public class UmsMember {
-
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
   private long id;
   private long memberLevelId;
   private String username;

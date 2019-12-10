@@ -1,8 +1,8 @@
 package com.springboot.gmall.user.service.impl;
 
+import com.springboot.gmall.service.UserService;
 import com.springboot.gmall.user.mapper.UserMapper;
-import com.springboot.gmall.user.pojo.UmsMember;
-import com.springboot.gmall.user.service.UserService;
+import com.springboot.gmall.pojo.UmsMember;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,6 +14,6 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public List<UmsMember> getAll() {
-        return userMapper.getAll();
+        return userMapper.selectAll();
     }
 }
